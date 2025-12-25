@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Avengers (2012) - Movie Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-section { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('web img/avengers-hero.jpg'); background-size: cover; background-position: center; padding: 3.5rem 2rem; text-align: center; margin-bottom: 2rem; }
+        .media-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; padding: 1rem; max-width: 1100px; margin: 0 auto; }
+        .gallery-item { border-radius: 10px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.35); }
+        .gallery-item img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .video-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+        .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+        .movie-details { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .cast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .cast-member img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 2px solid #FFD700; }
+        @media (max-width: 768px) { .gallery-item img { height: 140px; } .video-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Avengers (2012)</h1>
+        <p>Earth's mightiest heroes assemble to stop an alien invasion led by Loki.</p>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="media-gallery">
+                <div class="gallery-item"><img src="web img/the avenger.jpeg" alt="The Avengers Poster"></div>
+                <div class="gallery-item"><img src="web img/avengers-nyc.jpg" alt="Avengers in NYC"></div>
+                <div class="gallery-item"><img src="web img/loki.jpg" alt="Loki"></div>
+                <div class="gallery-item"><img src="web img/avengers-assemble.jpg" alt="Assemble"></div>
+            </div>
+        </section>
+
+        <section class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/eOrNdBpGMv8" title="The Avengers - Official Trailer"></iframe>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dG5z3gS-1gE" title="Avengers - Battle of New York"></iframe>
+            </div>
+        </section>
+
+        <div class="movie-details">
+            <section class="info-section">
+                <h2>Movie Overview</h2>
+                <p>Nick Fury of S.H.I.E.L.D. brings together a team of superheroes — Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye — to stop Loki and an alien army from conquering Earth.</p>
+
+                <div class="info-grid">
+                    <div class="stat-box"><h4>IMDb Rating</h4><p>8.0/10</p></div>
+                    <div class="stat-box"><h4>Rotten Tomatoes</h4><p>91%</p></div>
+                    <div class="stat-box"><h4>Budget</h4><p>$220 million</p></div>
+                    <div class="stat-box"><h4>Box Office</h4><p>$1.518 billion</p></div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Cast & Crew</h2>
+                <div class="cast-grid">
+                    <div class="cast-member">
+                        <img src="web img/robert-downey-jr.jpg" alt="Robert Downey Jr.">
+                        <h4>Robert Downey Jr.</h4>
+                        <p>Tony Stark / Iron Man</p>
+                    </div>
+                    <div class="cast-member">
+                        <img src="web img/chris-evans.jpg" alt="Chris Evans">
+                        <h4>Chris Evans</h4>
+                        <p>Steve Rogers / Captain America</p>
+                    </div>
+                    <div class="cast-member">
+                        <img src="web img/mark-ruffalo.jpg" alt="Mark Ruffalo">
+                        <h4>Mark Ruffalo</h4>
+                        <p>Bruce Banner / Hulk</p>
+                    </div>
+                    <div class="cast-member">
+                        <img src="web img/scarlett-johansson.jpg" alt="Scarlett Johansson">
+                        <h4>Scarlett Johansson</h4>
+                        <p>Natasha Romanoff / Black Widow</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Production Details</h2>
+                <div class="info-grid">
+                    <div class="stat-box"><h4>Director</h4><p>Joss Whedon</p></div>
+                    <div class="stat-box"><h4>Release Date</h4><p>May 4, 2012</p></div>
+                    <div class="stat-box"><h4>Runtime</h4><p>143 minutes</p></div>
+                    <div class="stat-box"><h4>MPAA Rating</h4><p>PG-13</p></div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Critical Reception</h2>
+                <p>The Avengers was widely praised for delivering on its promise to bring together Marvel's major heroes in a fun, action-packed blockbuster with sharp banter and memorable set pieces.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Part of the Marvel Cinematic Universe Timeline. Return to <a href="index.html" style="color: #FFD700;">main timeline</a>.</p>
+    </footer>
+</body>
+</html>

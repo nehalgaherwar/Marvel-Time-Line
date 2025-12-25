@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guardians of the Galaxy (2014) - Movie Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+                        url('web img/guardians-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .media-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; padding: 1rem; max-width: 1100px; margin: 0 auto; }
+        .gallery-item { border-radius: 10px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.35); }
+        .gallery-item img { width: 100%; height: 180px; object-fit: cover; display: block; }
+
+        .video-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+        .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+        .movie-details { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .cast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .cast-member img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 2px solid #FFD700; }
+
+        @media (max-width: 768px) { .gallery-item img { height: 140px; } .video-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guardians of the Galaxy (2014)</h1>
+        <p>A ragtag team of misfits comes together to save the galaxy with heart and humor.</p>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="media-gallery">
+                <div class="gallery-item"><img src="web img/guardians_poster_via_marvel.jpg" alt="Guardians Poster"></div>
+                <div class="gallery-item"><img src="web img/star-lord.jpg" alt="Star-Lord"></div>
+                <div class="gallery-item"><img src="web img/gamora.jpg" alt="Gamora"></div>
+                <div class="gallery-item"><img src="web img/rocket-groot.jpg" alt="Rocket and Groot"></div>
+            </div>
+        </section>
+
+        <section class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/d96cjJhvlMA" title="Guardians of the Galaxy - Official Trailer"></iframe>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/3KO1GMS5q3I" title="Guardians - Awesome Mix Scene"></iframe>
+            </div>
+        </section>
+
+        <div class="movie-details">
+            <section class="info-section">
+                <h2>Movie Overview</h2>
+                <p>After stealing a mysterious orb, Peter Quill finds himself hunted by the villainous Ronan. To evade capture, Quill forms an uneasy alliance with a group of extraterrestrial misfits: Gamora, Rocket, Drax, and Groot. Together they must work as a team to protect the galaxy.</p>
+
+                <div class="info-grid">
+                    <div class="stat-box"><h4>IMDb Rating</h4><p>8.0/10</p></div>
+                    <div class="stat-box"><h4>Rotten Tomatoes</h4><p>91%</p></div>
+                    <div class="stat-box"><h4>Budget</h4><p>$170 million</p></div>
+                    <div class="stat-box"><h4>Box Office</h4><p>$773.3 million</p></div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Cast & Crew</h2>
+                <div class="cast-grid">
+                    <div class="cast-member">
+                        <img src="web img/chris-pratt.jpg" alt="Chris Pratt">
+                        <h4>Chris Pratt</h4>
+                        <p>Peter Quill / Star-Lord</p>
+                    </div>
+                    <div class="cast-member">
+                        <img src="web img/zoe-saldana.jpg" alt="Zoe Saldana">
+                        <h4>Zoe Saldana</h4>
+                        <p>Gamora</p>
+                    </div>
+                    <div class="cast-member">
+                        <img src="web img/dave-bautista.jpg" alt="Dave Bautista">
+                        <h4>Dave Bautista</h4>
+                        <p>Drax the Destroyer</p>
+                    </div>
+                    <div class="cast-member">
+                        <img src="web img/bradley-cooper.jpg" alt="Bradley Cooper (voice)">
+                        <h4>Bradley Cooper</h4>
+                        <p>Voice of Rocket</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Production Details</h2>
+                <div class="info-grid">
+                    <div class="stat-box"><h4>Director</h4><p>James Gunn</p></div>
+                    <div class="stat-box"><h4>Release Date</h4><p>August 1, 2014</p></div>
+                    <div class="stat-box"><h4>Runtime</h4><p>121 minutes</p></div>
+                    <div class="stat-box"><h4>MPAA Rating</h4><p>PG-13</p></div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Critical Reception</h2>
+                <p>Guardians of the Galaxy was praised for its humor, soundtrack, visual style, and ensemble cast, quickly becoming one of the MCU's breakout hits and a fan favorite.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Part of the Marvel Cinematic Universe Timeline. Return to <a href="index.html" style="color: #FFD700;">main timeline</a>.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,419 @@
+/* styles.css - Awesome Marvel MCU Timeline */
+
+/* Import fonts if not added in HTML */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%); /* Dark cosmic gradient */
+    background-attachment: fixed;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Subtle comic-book pattern overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(229, 9, 20, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+header {
+    /* Layered: MCU background image with a strong gradient overlay for brand color */
+    background-image: linear-gradient(135deg, rgba(229,9,20,0.88) 0%, rgba(178,7,16,0.88) 100%), ('web\ img/');
+    background-size: cover, cover;
+    background-position: center center;
+    background-blend-mode: overlay;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem; /* more vertical space for a hero-like header */
+    position: relative;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 4px 20px rgba(229,9,20,0.25);
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+    overflow: hidden;
+}
+
+/* subtle dark overlay so text stays readable on bright images */
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* keep header content above the overlay */
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 10px solid #e50914;
+}
+
+header h1 {
+    font-family: 'Orbitron', monospace;
+    margin: 0;
+    font-size: 3.6rem; /* larger for hero effect */
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px #FFD700; }
+    to { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px #FFD700, 0 0 30px #e50914; }
+}
+
+header p {
+    margin: 0.8rem 0 0;
+    font-size: 1.15rem;
+    font-weight: 300;
+    opacity: 0.95;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* optional simple nav inside header */
+.header-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.header-nav a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.15s ease;
+    background: rgba(0,0,0,0.15);
+}
+
+.header-nav a:hover {
+    background: rgba(255,215,0,0.12);
+    transform: translateY(-2px);
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #e50914, #FFD700, #e50914);
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.phase-header {
+    text-align: center;
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 3rem 0 2rem;
+    color: #FFD700;
+    background: linear-gradient(135deg, rgba(229, 9, 20, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 2px solid #e50914;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phase-header:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(229, 9, 20, 0.5);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 3rem 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s ease forwards;
+    display: flex;
+    align-items: flex-start; /* align content and keep dot centered */
+}
+
+.timeline-item:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item:nth-child(odd) {
+    justify-content: flex-start; /* content appears to the left of centerline */
+}
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+    padding-left: 60px;
+    flex-direction: row-reverse; /* show poster on the left, text on the right */
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-end; /* content appears to the right of centerline */
+}
+.timeline-item:nth-child(even) .timeline-content {
+    text-align: right;
+    padding-right: 60px;
+    flex-direction: row; /* show text on the left, poster on the right */
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 1.5rem;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #e50914, #FFD700);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 0 4px #fff, 0 0 20px rgba(229, 9, 20, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 48%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -20px;
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -20px;
+    border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(229, 9, 20, 0.4);
+    border-color: rgba(255, 215, 0, 0.5);
+}
+
+.movie-poster {
+    width: 100px;
+    height: 150px; /* 2:3 aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* prevent poster from shrinking */
+    margin: 0.5rem 0;
+}
+
+.movie-poster:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(229, 9, 20, 0.4);
+}
+
+.content-text {
+    flex: 1;
+    min-width: 0; /* allows text to wrap properly */
+}
+
+.timeline-content h2 {
+    margin: 0;
+    font-family: 'Orbitron', monospace;
+    color: #FFD700;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+    color: #ccc;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .phase-header {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+    }
+
+    .timeline::before {
+        left: 25px;
+    }
+
+    .timeline-dot {
+        left: 25px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 70px);
+        left: 70px !important;
+        text-align: left !important;
+        padding: 1.25rem !important;
+        margin-left: 0;
+        display: flex;
+        flex-direction: row !important; /* keep side by side on mobile */
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .movie-poster {
+        width: 80px; /* smaller on mobile */
+        height: 120px;
+        margin: 0;
+    }
+
+    .content-text {
+        flex: 1;
+    }
+
+    .timeline-content h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .timeline-content::before {
+        display: none; /* Hide arrows on mobile */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        left: 70px !important;
+        text-align: left !important;
+    }
+
+    .timeline-item {
+        margin: 2rem 0;
+    }
+}
+
+/* Additional Awesome Touches */
+.timeline-item {
+    perspective: 1000px; /* For potential 3D effects in future */
+}
+
+/* Scroll indicator for fun */
+html {
+    scroll-behavior: smooth;
+}
