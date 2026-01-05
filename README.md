@@ -104,3 +104,54 @@ mcu-timeline/
 │
 └── README.md
 
+## Movie Summaries (Short & Spoiler-Free) 🎬
+
+- **Iron Man (2008)** – Tony Stark builds a powered suit and becomes the first hero of the MCU.
+- **The Incredible Hulk (2008)** – Bruce Banner searches for a cure while struggling with his uncontrollable alter ego.
+- **Iron Man 2 (2010)** – Tony Stark faces new enemies and global pressure over his technology.
+- **Thor (2011)** – The god of thunder is exiled to Earth and learns humility to reclaim his power.
+- **Captain America: The First Avenger (2011)** – Steve Rogers becomes a super soldier during World War II.
+- **The Avengers (2012)** – Earth’s mightiest heroes unite to stop a global alien threat.
+
+### Phase 2
+
+- **Iron Man 3 (2013)** – Tony Stark battles inner fears while confronting a mysterious terrorist.
+- **Thor: The Dark World (2013)** – Thor fights to save the universe from an ancient dark force.
+- **Captain America: The Winter Soldier (2014)** – Steve uncovers a conspiracy within a trusted organization.
+- **Guardians of the Galaxy (2014)** – A group of misfits team up to protect a powerful cosmic artifact.
+- **Avengers: Age of Ultron (2015)** – The Avengers face a dangerous artificial intelligence.
+- **Ant-Man (2015)** – A thief gains shrinking powers and pulls off an impossible heist.
+
+### Phase 3
+
+- **Captain America: Civil War (2016)** – The Avengers split over government oversight.
+- **Doctor Strange (2016)** – A surgeon learns mystical arts to protect reality.
+- **Guardians of the Galaxy Vol. 2 (2017)** – The Guardians uncover secrets about Peter Quill’s past.
+- **Spider-Man: Homecoming (2017)** – Peter Parker balances school life with being a superhero.
+- **Thor: Ragnarok (2017)** – Thor races to stop the destruction of Asgard.
+- **Black Panther (2018)** – T’Challa rises as king and protector of Wakanda.
+- **Avengers: Infinity War (2018)** – Heroes unite to stop a powerful cosmic villain.
+
+### Phase 4
+
+- **Black Widow (2020)** – Natasha Romanoff confronts her past and unfinished business.
+- **Shang-Chi and the Legend of the Ten Rings (2021)** – A martial artist faces his family legacy.
+- **Eternals (2021)** – Immortal beings protect humanity from an ancient threat.
+- **Spider-Man: No Way Home (2021)** – Peter Parker deals with multiverse chaos.
+- **Doctor Strange in the Multiverse of Madness (2022)** – Strange explores dangerous realities across the multiverse.
+- **Thor: Love and Thunder (2022)** – Thor faces a god-slaying enemy while searching for purpose.
+- **Black Panther: Wakanda Forever (2022)** – Wakanda defends itself while mourning a great loss.
+- **Ant-Man and the Wasp: Quantumania (2023)** – The heroes explore the Quantum Realm.
+
+### Phase 5
+
+- **Guardians of the Galaxy Vol. 3 (2023)** – The Guardians fight to protect one of their own.
+- **The Marvels (2023)** – Three heroes with connected powers must work together.
+- **Deadpool & Wolverine (2024)** – Deadpool teams up with Wolverine to save his universe.
+- **Captain America: Brave New World (2024)** – Sam Wilson faces global challenges as the new Captain America.
+- **Thunderbolts* (2024)** – Anti-heroes take on dangerous government missions.
+- **Blade (2024)** – A half-vampire hunts supernatural threats.
+- **Fantastic Four (2024)** – A team gains powers from cosmic radiation.
+- **Avengers: Doomsday (2025)** – The Avengers battle Doctor Doom.
+- **Avengers: Secret Wars (2025)** – Heroes clash across multiple universes.
+
