@@ -47,3 +47,60 @@ Think of it as **Wikipedia meets Avengers HQ** 🦸‍♂️
 
 ## Project Structure 📂
 
+mcu-timeline/
+│
+├── index.html
+│ └── Main landing page displaying the complete MCU movie timeline
+│
+├── style.css
+│ └── Contains all styling for layout, timeline design, and responsiveness
+│
+├── script.js
+│ └── JavaScript file for interactivity and future enhancements
+│
+├── web img/
+│ └── Stores all movie poster images used in the project
+│ ├── iron-man.jpg
+│ ├── the-incredible-hulk.jpg
+│ ├── thor.jpg
+│ ├── avengers.jpg
+│ └── other-movie-posters
+│
+├── ironman.html
+├── iron-man-2.html
+├── ironman-3.html
+│ └── Individual movie detail pages
+│
+├── thor.html
+├── thor-2.html
+├── thor3.html
+│
+├── captain-america-first-avenger.html
+├── captain-america-winter-soldier.html
+├── captain-america-civil-war.html
+│
+├── avengers.html
+├── avengers-age-of-ultron.html
+├── avengers-infinity-war.html
+├── avengers-endgame.html
+│
+├── guardians-of-the-galaxy.html
+├── guardians-of-the-galaxy-vol-2.html
+├── guardians-of-the-galaxy-vol-3.html
+│
+├── ant-man.html
+├── ant-man-and-the-wasp.html
+├── ant-man-quantumania.html
+│
+├── doctor-strange.html
+├── doctor-strange-multiverse.html
+│
+├── black-panther.html
+├── black-panther-wakanda-forever.html
+│
+├── spiderman-homecoming.html
+├── spiderman-far-from-home.html
+├── spiderman-no-way-home.html
+│
+└── README.md
+
